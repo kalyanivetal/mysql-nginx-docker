@@ -1,0 +1,39 @@
+version: '3'
+services:
+  db:
+    container_name: app1_db
+    restart: always
+    image: mysql:8.0.2
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER : myuser
+      MYSQL_PASSWORD: pw
+      MYSQL_DATABASE : demo
+    volumes:
+      - "./my.conf:/etc/mysql/conf.d/config-file.cnf"
+      - "./data:/var/lib/mysql:rw"
+    networks:
+      static_ip:
+        ipv4_address: 198.168.1.1
+  goweb:
+    build: ./my-project
+    image: final_test/my-project
+    container_name: go-mysql
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      static_ip:
+        ipv4_address: 198.168.1.2
+
+networks:
+  static_ip:
+    ipam:
+      driver: default
+      config:
+        - subnet: 198.168.0.0/20

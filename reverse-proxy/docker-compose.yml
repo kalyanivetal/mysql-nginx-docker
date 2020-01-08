@@ -1,0 +1,14 @@
+version: '3'
+services:
+  proxy:
+    build: ./
+    networks:
+      - site1
+    ports:
+      - 80:80
+      - 443:443
+
+networks:
+  site1:
+    external:
+      name: final_test_static_ip
