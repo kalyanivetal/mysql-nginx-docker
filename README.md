@@ -66,4 +66,7 @@ docker-compose down => stop and then removes all up(running) containers of respe
 
 docker rm -f $(docker ps -aq) => to remove all container forcefully
 
+
+### open /etc/hosts file using sudo previledge and add example.com along to 127.0.0.1 IP address ###
+
 ##### IGNORE THE mysqlCRUD.go FILE #####
