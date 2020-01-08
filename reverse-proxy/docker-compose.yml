@@ -11,4 +11,4 @@ services:
 networks:
   site1:
     external:
-      name: final_test_static_ip
+      name: mysql-nginx-docker_static_ip

@@ -5,17 +5,17 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/sj/final_test/my-project/app"
-	"github.com/sj/final_test/my-project/db"
+	"github.com/shubham1010/mysql-nginx-docker/my-project/api"
+	"github.com/shubham1010/mysql-nginx-docker/my-project/dbConnections"
 )
 
 func main() {
-	database, err := db.CreateDatabase()
+	database, err := dbConnections.CreateDatabase()
 	if err != nil {
 		log.Fatal("Database connection failed: %s", err.Error())
 	}
 
-	app := &app.App{
+	app := &api.App{
 		Router:   mux.NewRouter().StrictSlash(true),
 		Database: database,
 	}

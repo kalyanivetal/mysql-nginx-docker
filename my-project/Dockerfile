@@ -8,9 +8,9 @@ RUN go get github.com/golang-migrate/migrate/database/mysql
 RUN go get github.com/golang-migrate/migrate/source/file
 RUN go get github.com/gorilla/mux
 
-ADD . /go/src/github.com/sj/final_test/my-project
+ADD . /go/src/github.com/shubham1010/mysql-nginx-docker/my-project
 
-WORKDIR /go/src/github.com/sj/final_test/my-project
+WORKDIR /go/src/github.com/shubham1010/mysql-nginx-docker/my-project
 
 #build binary
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
@@ -21,7 +21,7 @@ MAINTAINER shubham jagdhane
 WORKDIR /root/
 
 # copy main binary
-COPY --from=dev /go/src/github.com/sj/final_test/my-project .
+COPY --from=dev /go/src/github.com/shubham1010/mysql-nginx-docker/my-project .
 
 EXPOSE 8080
 ENTRYPOINT ["./main"]

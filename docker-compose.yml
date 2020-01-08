@@ -21,7 +21,7 @@ services:
         ipv4_address: 198.168.1.1
   goweb:
     build: ./my-project
-    image: final_test/my-project
+    image: mysql-nginx-docker/my-project
     container_name: go-mysql
     ports:
       - "8080:8080"
