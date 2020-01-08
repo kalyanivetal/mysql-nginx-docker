@@ -15,7 +15,7 @@ If you are computer has nginx and mysql service on host machine then follow the 
 sudo systemctl stop nginx.service
 sudo systemctl stop mysql.service
 
-####To start microservices####
+#### To start microservices ####
 
 Give your shell as root previledge then execute following commands:
 Dependency need: see the docker.README file
@@ -41,7 +41,7 @@ Step-[II]:
 
 Make sure that all three containers are up(running) by using command: docker ps
 
-####Insert records####
+#### Insert records ####
 
 (POST METHOD)
 Dependency:
@@ -51,14 +51,14 @@ sudo apt-get install curl (ubuntu/debian)
 curl --insecure -H "Content-Type: application/json" -X POST -d '{"id":"1","date":"2020/01/10","name":"shubham1010"}' https://example.com/endpoint
 
 
-####RestAPI's on browser####
+#### RestAPI's on browser ####
 
 (GET METHOD)
 visit https://example.com/endpoint => (it will display all records in the table)
 
 visit https://example.com/endpoint/id => (id is an integer, it will display the records which has id in table if exists)
 
-####To stop and remove ALL microservices####
+#### To stop and remove ALL microservices ####
 
 docker-compose down => stop and then removes all up(running) containers of respective docker-compose.yml file.
 
@@ -66,4 +66,4 @@ docker-compose down => stop and then removes all up(running) containers of respe
 
 docker rm -f $(docker ps -aq) => to remove all container forcefully
 
-
+### IGNORE THE mysqlCRUD.go FILE ###
