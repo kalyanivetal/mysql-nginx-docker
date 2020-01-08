@@ -1,0 +1,23 @@
+Dependency: docker
+
+To resolve docker depenedency follows the below commands:
+
+sudo apt-get update
+sudo apt-get install docker
+sudo apt-get install docker-ce
+sudo apt-get install docker-compose
+
+
+Some helpful docker commands:
+(give root previledge to your shell/termial)
+
+docker ps => display all running containers
+
+docker container inspect container_id => display details about the container which has 'container_id'
+
+docker network ls => display all networks available in docker
+
+
+docker networks inspect network_name => display details about the network 'network_name'
+
+docker logs container_id => display logs of container who has 'container_id'
