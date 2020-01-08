@@ -43,7 +43,7 @@ Make sure that all three containers are up(running) by using command: docker ps
 
 #### Insert records ####
 
-(POST METHOD)
+##### (POST METHOD) #####
 Dependency:
 curl => command to install
 sudo apt-get install curl (ubuntu/debian)
@@ -53,7 +53,7 @@ curl --insecure -H "Content-Type: application/json" -X POST -d '{"id":"1","date"
 
 #### RestAPI's on browser ####
 
-(GET METHOD)
+##### (GET METHOD) #####
 visit https://example.com/endpoint => (it will display all records in the table)
 
 visit https://example.com/endpoint/id => (id is an integer, it will display the records which has id in table if exists)
@@ -66,4 +66,4 @@ docker-compose down => stop and then removes all up(running) containers of respe
 
 docker rm -f $(docker ps -aq) => to remove all container forcefully
 
-### IGNORE THE mysqlCRUD.go FILE ###
+##### IGNORE THE mysqlCRUD.go FILE #####
