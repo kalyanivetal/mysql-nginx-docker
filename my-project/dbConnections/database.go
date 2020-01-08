@@ -13,8 +13,8 @@ import (
 )
 
 func CreateDatabase() (*sql.DB, error) {
-	serverName := "198.168.1.1:3306"
-//	serverName := "db:3306"
+//	serverName := "198.168.1.1:3306"
+	serverName := "db:3306"
 	user := "myuser"
 	password := "pw"
 	dbName := "demo"
