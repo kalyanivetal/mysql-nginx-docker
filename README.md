@@ -22,12 +22,12 @@ Dependency need: see the docker.README file
 
 Step-[I]:
 	
-	1)change directory to mysql-nginx-docker (make your present working directory as 'mysql-nginx-docker')
+	1) change directory to mysql-nginx-docker (make your present working directory as 'mysql-nginx-docker')
 
-	2)docker-compose build 
+	2) docker-compose build 
 	(it may take time if the images are not on your local machine)
 
-	3)docker-compose up -d 
+	3) docker-compose up -d 
 	(it will start your go-web and mysql containers)
 
 	4) See the which network is formed by command 'docker network ls'
@@ -37,16 +37,16 @@ Step-[I]:
 Step-[II]:
 
 
-	1)change directory to reverse-proxy (make your present working directory as 'reverse-proxy')
+	1) change directory to reverse-proxy (make your present working directory as 'reverse-proxy')
 
 	2) Above copied network name paste it into docker-compose.yml file of current directory at 
 	'external:
 	   name: copied network name'
 	   (Dont use quotes)
 
-	3)docker-compose build
+	3) docker-compose build
 
-	4)docker-compose up -d
+	4) docker-compose up -d
 
 
 Make sure that all three containers are up(running) by using command: docker ps
