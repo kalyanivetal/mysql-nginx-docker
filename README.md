@@ -51,6 +51,8 @@ Step-[II]:
 
 Make sure that all three containers are up(running) by using command: docker ps
 
+### open /etc/hosts file of your host machine using sudo previledge and add example.com along to 127.0.0.1 IP address ###
+
 #### Insert records ####
 
 ##### (POST METHOD) #####
@@ -63,7 +65,7 @@ curl --insecure -H "Content-Type: application/json" -X POST -d '{"id":"1","date"
 
 #### RestAPI's on browser ####
 
-##### (GET METHOD) #####
+##### (GET METHODS) #####
 visit https://example.com/endpoint => (it will display all records in the table)
 
 visit https://example.com/endpoint/id => (id is an integer, it will display the records which has id in table if exists)
@@ -77,6 +79,5 @@ docker-compose down => stop and then removes all up(running) containers of respe
 docker rm -f $(docker ps -aq) => to remove all container forcefully
 
 
-### open /etc/hosts file using sudo previledge and add example.com along to 127.0.0.1 IP address ###
 
-##### IGNORE THE mysqlCRUD.go FILE #####
+###### IGNORE THE mysqlCRUD.go FILE ######
