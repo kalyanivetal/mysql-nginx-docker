@@ -30,13 +30,23 @@ Step-[I]:
 	3)docker-compose up -d 
 	(it will start your go-web and mysql containers)
 
+	4) See the which network is formed by command 'docker network ls'
+	
+	5) Copy that network name.
+
 Step-[II]:
+
 
 	1)change directory to reverse-proxy (make your present working directory as 'reverse-proxy')
 
-	2)docker-compose build
+	2) Above copied network name paste it into docker-compose.yml file of current directory at 
+	'external:
+	   name: copied network name'
+	   (Dont use quotes)
 
-	3)docker-compose up -d
+	3)docker-compose build
+
+	4)docker-compose up -d
 
 
 Make sure that all three containers are up(running) by using command: docker ps
